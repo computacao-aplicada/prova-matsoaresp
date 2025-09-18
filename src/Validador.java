@@ -44,7 +44,5 @@ public class Validador {
                segundoDigito == Character.getNumericValue(cpf.charAt(10));
     }
 
-
-
 }
 
