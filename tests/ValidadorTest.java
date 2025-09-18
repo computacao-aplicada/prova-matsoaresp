@@ -36,5 +36,11 @@ public class ValidadorTest {
         assertFalse(Validador.validarCPF("123.456.789-08"));
     }
 
+    @Test
+    void deveTestarLimites() {
+        assertFalse(Validador.validarCPF("111.111.111-11"));
+        assertFalse(Validador.validarCPF("222.222.222-22"));
+        assertFalse(Validador.validarCPF("333.333.333-33"));
+    }
 
 }
