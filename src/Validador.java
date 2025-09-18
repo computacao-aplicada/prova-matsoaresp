@@ -1,6 +1,11 @@
 public class Validador {
 
     public static boolean validarCPF(String cpf) {
+        //Se o CPF for nulo, retorna falso
+        if (cpf == null) {
+            return false;
+        }
+
         // Remover caracteres não numéricos
         cpf = cpf.replaceAll("\\D", "");
 
@@ -38,6 +43,8 @@ public class Validador {
         return primeiroDigito == Character.getNumericValue(cpf.charAt(9)) &&
                segundoDigito == Character.getNumericValue(cpf.charAt(10));
     }
+
+
 
 }
 
